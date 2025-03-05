@@ -56,18 +56,18 @@
 
 // export default Dashboard;
 
-
-
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import Charts from "../Components/Charts";
 
 const Dashboard = () => {
   return (
-    <div className="ml-[254px] mt-[75px] bg-[#282828] min-h-screen p-6">
-      
+    <div className="ml-[254px] mt-[75px] bg-[#282828] min-h-full p-6">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <h2 className="text-white text-[25px] font-semibold">Channel analytics</h2>
+        <h2 className="text-white text-[25px] font-semibold">
+          Channel analytics
+        </h2>
         <button className="bg-[#0D0D0D] text-white text-[14px] px-4 py-2 rounded-3xl">
           Advanced mode
         </button>
@@ -88,7 +88,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      
       <hr className="text-[white] mt-[10px] opacity-10 w-full" />
 
       <h1 className="font-bold text-[28px] text-white mt-[26px]">
@@ -96,24 +95,28 @@ const Dashboard = () => {
       </h1>
 
       <div className="flex justify-between ">
-         <div className="w-[676px] h-[394px] border-1 border-white ml-[3px] opacity-30 mt-[25px] rounded-3xl ">
-           <div className="flex justify-between items-center mt-[22px]">
-           <div className="ml-[95px]">
-             <h3 className="text-[white]  font-semibold ">Views</h3>
-           </div>
-           <div>
-             <h3 className="text-[white]">Watch Time(hours)</h3>
+        <div className="w-[676px] h-[394px] border-1 border-white ml-[3px] opacity-70 mt-[25px] rounded-3xl ">
+          <div className="flex justify-between items-center mt-[22px]">
+            <div className="ml-[95px]">
+              <h3 className="text-[white]  font-semibold ">Views</h3>
+              <div className="h-1 w-6 bg-white opacity-100 mt-[19px] ml-2"></div>
+            </div>
+            <div>
+              <h3 className="text-[white]">Watch Time(hours)</h3>
+              <div className="h-1 w-6 bg-white opacity-100 mt-[19px] ml-12"></div>
+            </div>
+            <div className="mr-[79px]">
+              <h3 className="text-[white]">Subscribers</h3>
+              <div className="h-1 w-6 bg-white opacity-100 mt-[19px] ml-6"></div>
+            </div>
           </div>
-         <div className="mr-[79px]">
-            <h3 className="text-[white]">Subscribers</h3>
-           </div>
-         </div>
-         </div>
-     </div>
+          <div className="w-[100%] h-[394px] mt-[30px]"><Charts/></div>
+        </div>
+        
+        
+      </div>
     </div>
   );
 };
 
 export default Dashboard;
-
-
