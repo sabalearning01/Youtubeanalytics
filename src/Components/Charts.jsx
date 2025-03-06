@@ -1,21 +1,14 @@
+
 import React from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
-
-
-// const data = [
-//   { date: '2023-10-01', uv: 0, pv: 2400, amt: 2400 },
-//   { date: '2023-10-02', uv: 0, pv: 1398, amt: 2210 },
-//   { date: '2023-10-03', uv: 0, pv: 9800, amt: 2290 },
-//   { date: '2023-10-04', uv: 0, pv: 3908, amt: 2000 },
-//   { date: '2023-10-05', uv: 0, pv: 4800, amt: 2181 },
-// ]; 
-
+// Sample data with views, watch time, and subscribers
 const data = [
-  { date: '2023-10-01', value: 0 },
-  { date: '2023-10-02', value: 1 },
-  { date: '2023-10-03', value: 2 },
-  { date: '2023-10-04', value: 3 },
+  { date: '2023-10-01', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '2023-10-02', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '2023-10-03', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '2023-10-04', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '2023-10-05', views: 30, watchTime: 20, subscribers: 10 },
 ];
 
 const Charts = () => {
@@ -23,42 +16,29 @@ const Charts = () => {
     <div style={{ width: '100%', height: 300 }}>
       <ResponsiveContainer>
         <LineChart data={data}>
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-          {/* <CartesianGrid stroke="#ccc" /> */}
-          <XAxis dataKey="name" />
-          {/* <YAxis /> */}
+          {/* Add lines for each metric */}
+          <Line type="monotone" dataKey="views" stroke="#ffff" name="Views" />
+          <Line type="monotone" dataKey="watchTime" stroke="#ffff" name="Watch Time (hours)" />
+          <Line type="monotone" dataKey="subscribers" stroke="#ffff" name="Subscribers" />
+
+          {/* Add grid lines */}
+          {/* <CartesianGrid stroke="#ccc" strokeDasharray="5 5" /> */}
+
+          {/* Configure X-axis to show dates */}
+          <XAxis dataKey="date" />
+
+          {/* Configure Y-axis */}
+          <YAxis />
+
+          {/* Add tooltip for hover details */}
           <Tooltip />
+
+          {/* Add legend to identify lines */}
+          {/* <Legend /> */}
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
 };
 
-
-
-// import React from 'react';
-// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-
-// const data = [
-//   { date: '2023-10-01', value: 0 },
-//   { date: '2023-10-02', value: 1 },
-//   { date: '2023-10-03', value: 2 },
-//   { date: '2023-10-04', value: 3 },
-// ];
-
-// const Charts = () => (
-//   <div style={{ width: '800px', margin: '0 auto' }}>
-//     <h1>Date vs Value Chart</h1>
-//     <LineChart width={800} height={400} data={data}>
-//       <CartesianGrid strokeDasharray="3 3" />
-//       <XAxis dataKey="date" />
-//       <YAxis />
-//       <Tooltip />
-//       <Legend />
-//       <Line type="monotone" dataKey="value" stroke="blue" />
-//     </LineChart>
-//   </div>
-// );
-
-// export default Charts;
 export default Charts;
