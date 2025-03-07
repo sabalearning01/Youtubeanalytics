@@ -2,18 +2,19 @@
 import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
-// Sample data with views, watch time, and subscribers
 const data = [
-  { date: '2023-10-01', views: 30, watchTime: 20, subscribers: 10 },
-  { date: '2023-10-02', views: 30, watchTime: 20, subscribers: 10 },
-  { date: '2023-10-03', views: 30, watchTime: 20, subscribers: 10 },
-  { date: '2023-10-04', views: 30, watchTime: 20, subscribers: 10 },
-  { date: '2023-10-05', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '06 Feb 2..', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '11 Feb 2...', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '15 Feb 2025', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '20 Feb 2025', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '24 Feb 2025', views: 30, watchTime: 20, subscribers: 10 },
+  { date: '24 Feb 2', views: 30, watchTime: 20, subscribers: 10 },
+  
 ];
 
 const Charts = () => {
   return (
-    <div style={{ width: '100%', height: 300 }}>
+    <div style={{ width: '100%', height: 200 }}>
       <ResponsiveContainer>
         <LineChart data={data}>
           {/* Add lines for each metric */}
@@ -28,7 +29,7 @@ const Charts = () => {
           <XAxis dataKey="date" />
 
           {/* Configure Y-axis */}
-          <YAxis />
+          <YAxis orientation="right" ticks={[3,2,1,0]}/>
 
           {/* Add tooltip for hover details */}
           <Tooltip />

@@ -110,9 +110,15 @@ const Dashboard = () => {
               <div className="h-1 w-6 bg-white opacity-100 mt-[19px] ml-6"></div>
             </div>
           </div>
-          <div className="w-[100%] h-[394px] mt-[30px]"><Charts/></div>
+          
+          <div className="w-[100%] h-[394px] mt-[30px] ml-[25px]"><Charts/>
+          <button className="bg-[#000000] hover:bg-[#282828] hover:opacity-100 hover:text-white text-white rounded-3xl text-sm pt-3 pb-3 pl-4 pr-4 font-Roboto">See More</button></div>
+          
+          
+       
         </div>
         
+       
         
       </div>
     </div>
