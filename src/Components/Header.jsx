@@ -100,6 +100,7 @@ import Create from "../assets/Create.png";
 import { IoIosMenu, IoIosSearch } from "react-icons/io";
 import { GoQuestion } from "react-icons/go";
 import pepicons1 from '../assets/pepicons1.png';
+import blackguy1 from '../assets/blackguy1.png';
 
 
 const Header = () => {
@@ -129,8 +130,9 @@ const Header = () => {
         <div className="flex items-center gap-[20px]">
           <GoQuestion className="text-2xl text-white" />
           {/* <img className="object-contain" src={Create} alt="Create" /> */}
-          <img className="object-contain" src={pepicons1}/>
-          <img className="object-contain" src={Ellip} alt="Menu" />
+          <button className="flex  justify-between items-center gap-[10px] pt-[10px] pb-[10px] pl-[20px] pr-[20px] border-1 border-solid border-white opacity- rounded-full"><img className="object-contain" src={pepicons1}/><h3 className="text-white ">Create</h3></button>
+          {/* <img className="object-contain" src={Ellip} alt="Menu" /> */}
+          <img className="object-contain" src={blackguy1} alt="profile picture"/>
         </div>
       </div>
 

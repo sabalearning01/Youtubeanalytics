@@ -9,6 +9,7 @@ import communityicon from "../assets/communityicon.png";
 import mdisettings from "../assets/mdisettings.png";
 import feedbackicon from "../assets/feedbackicon.png";
 import { PiSubtitlesLight, PiCopyrightLight } from "react-icons/pi";
+import blackguy from '../assets/blackguy.png';
 
 const LeftSidebar = () => {
   return (
@@ -18,7 +19,8 @@ const LeftSidebar = () => {
        {/* Right Vertical Line (Separates Sidebar from Other Components) */}
        <div className="absolute right-0 top-0 h-full w-[2px] bg-[#ffff] opacity-5"></div>
       <div className="p-5">
-        <img className="mx-auto mt-6" src={Ellipse3} alt="Profile" />
+        {/* <img className="mx-auto mt-6" src={Ellipse3} alt="Profile" /> */}
+         <img className="object-contain mx-auto mt-6" src={blackguy} alt="profile picture"/>
         <h1 className="mt-4 text-center text-base text-white">Your Channel</h1>
         <h1 className="mt-2 text-center text-[#aaaaaa] text-base">
           Kuteyi Adekunle
@@ -27,27 +29,27 @@ const LeftSidebar = () => {
 
       {/* Sidebar Items */}
       <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-track-transparent">
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5 hover:roundec-full cursor-pointer">
           <img src={dashboardicon} alt="Dashboard" />
           <h3 className="text-white">Dashboard</h3>
         </div>
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5 hover:roundec-full cursor-pointer">
           <img src={contenticon} alt="Content" />
           <h3 className="text-white">Content</h3>
         </div>
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5  hover:roundec-full cursor-pointer">
           <img src={analyticsicon} alt="Analytics" />
           <h3 className="text-white">Analytics</h3>
         </div>
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5  hover:roundec-full cursor-pointer">
           <img src={communityicon} alt="Community" />
           <h3 className="text-white">Community</h3>
         </div>
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5 hover:roundec-full  cursor-pointer">
           <PiSubtitlesLight className="text-white text-2xl" />
           <h3 className="text-white">Subtitles</h3>
         </div>
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5 hover:roundec-full cursor-pointer">
           <PiCopyrightLight className="text-white text-2xl" />
           <h3 className="text-white">Copyright</h3>
         </div>
@@ -55,11 +57,11 @@ const LeftSidebar = () => {
 
       {/* Settings & Feedback */}
       <div>
-        <div className="flex items-center ml-7 gap-2 mt-7 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5 hover:roundec-full  cursor-pointer">
           <img src={mdisettings} alt="Settings" />
           <h3 className="text-white">Settings</h3>
         </div>
-        <div className="flex items-center ml-7 gap-2 mt-7 mb-5 hover:bg-black cursor-pointer">
+        <div className="flex items-center ml-7 gap-2 mt-5 mb-5 hover:bg-black hover:pt-3.5 pb-3.5 pl-2.5 hover:roundec-full cursor-pointer">
           <img src={feedbackicon} alt="Feedback" />
           <h3 className="text-white">Feedback</h3>
         </div>
