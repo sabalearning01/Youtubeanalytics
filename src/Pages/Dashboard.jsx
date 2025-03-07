@@ -27,7 +27,7 @@ const Dashboard = () => {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`text-[15px] font-semibold cursor-pointer transition-all ${
-                activeTab === tab ? "text-white border-b-2 border-white pb-1" : "text-gray-400"
+                activeTab === tab ? "mt-[10px] text-white border-b-2 border-white pb-1" : "text-gray-400"
               }`}
             >
               {tab}
@@ -41,7 +41,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <hr className="text-[white] mt-[10px] opacity-10 w-full" />
+      <hr className="text-[white] mt-[1px] opacity-10 w-full" />
 
       <h1 className="font-bold text-[28px] text-white mt-[26px]">
         Your channel didn’t get any views in the last 28 days

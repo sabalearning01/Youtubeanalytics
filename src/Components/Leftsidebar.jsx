@@ -21,7 +21,7 @@ const LeftSidebar = () => {
         <img className="mx-auto mt-6" src={Ellipse3} alt="Profile" />
         <h1 className="mt-4 text-center text-base text-white">Your Channel</h1>
         <h1 className="mt-2 text-center text-[#aaaaaa] text-base">
-          Saba Temitayo
+          Kuteyi Adekunle
         </h1>
       </div>
 
